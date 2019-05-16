@@ -19,5 +19,6 @@
             "email": "alla_88@inbox.lv"
         }
     ],
-    "minimum-stability": "stable"
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
