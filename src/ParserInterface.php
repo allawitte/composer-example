@@ -3,6 +3,7 @@
 /**
  * @author Victor Zinchenko <zinchenko.us@gmail.com>
  */
+namespace allawitte\parser;
 interface ParserInterface
 {
 

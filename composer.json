@@ -1,0 +1,23 @@
+{
+    "name": "allawitte/parser-example",
+    "description": "example project",
+    "type": "library",
+    "require": {
+        "php": "^7.0",
+        "phpquery/phpquery": "^0.0.1",
+        "zomberg/phpquery": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "allawitte\\parser\\": "src/"
+        }
+    },
+    "license": "BSR-3",
+    "authors": [
+        {
+            "name": "Alla Witte",
+            "email": "alla_88@inbox.lv"
+        }
+    ],
+    "minimum-stability": "stable"
+}
