@@ -1,11 +1,5 @@
 <?php
-
-require_once 'ParserInterface.php';
-//require_once 'phpquery/phpQuery/phpQuery.php';
-require_once __DIR__ . '/../vendor/autoload.php';
 namespace allawitte\parser;
-
-
 /**
  * @author Victor Zinchenko <zinchenko.us@gmail.com>
  */
@@ -15,16 +9,8 @@ class Parser implements ParserInterface
     public function process(string $url, string $tag):array
     {        
 		$html = $this->getParserByCurl($url);
-		//$pq = phpQuery::newDocument($html);
-		$pq = phpQuery::newDocument($html);
-		$links = $pq->find($tag);		
-		$parsedLinks = [];
-		foreach ($links as $link){			
-			$elem = pq($link);
-			$parsedLinks[]= ['text' => $elem->text(), 'href' => $elem->attr('href')];
-					
-		}
-		return $parsedLinks;
+        preg_match_all('#<\s*?'.$tag.'.*?>(.+?)<\/'.$tag.'>#sui', $html, $res);
+		return $res[0];
 		
     }
 	
@@ -40,5 +26,4 @@ class Parser implements ParserInterface
 			return $result;
 		}
 	}
-
 }
