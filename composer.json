@@ -3,9 +3,7 @@
     "description": "example project",
     "type": "library",
     "require": {
-        "php": "^7.0",
-        "phpquery/phpquery": "^0.0.1",
-        "zomberg/phpquery": "dev-master"
+        "php": "^7.0"        
     },
     "autoload": {
         "psr-4": {
